@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: rgb(48, 48, 48);
+}
+
 .logo {
     cursor: pointer;
 }
@@ -110,6 +114,11 @@
         position: absolute;
         top: 20%;
     }
+    /* Drop down list */
+    .menu_bar .nav_links .drop-down-list:hover .drop-bar {
+        position: relative;
+        transition: 0.3s ease;
+    }
 }
 
 .nav-active {
@@ -139,4 +148,65 @@
 
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+/* drop bar */
+
+.drop-down-list {
+    position: relative;
+    display: inline-block;
+}
+
+.drop-bar {
+    position: absolute;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    left: 0px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding: 20px 0px;
+    cursor: pointer;
+    z-index: 1;
+    /* transition: 0.5s ease; */
+}
+
+.menu_bar .nav_links .drop-down-list:hover .drop-bar {
+    opacity: 1;
+    visibility: visible;
+    left: 20px;
+    transition: 0.5s ease;
+}
+
+.drop-bar .a {
+    color: rgb(61, 61, 61);
+    display: block;
+    transition: linear 0.3s;
+}
+
+.drop-bar .a:hover {
+    background-color: rgb(68, 68, 68);
+    transition: linear 0.3s;
+    color: white;
+}
+
+.menu_bar .nav_links .drop-down-list:hover #menu3 {
+    color: rgb(45, 50, 122);
+}
+
+
+/* Line top */
+
+.line-top {
+    width: 0px;
+    height: 10px;
+    position: absolute;
+    background-color: rgb(75, 75, 75);
+    top: 0;
+}
+
+.menu_bar .nav_links .drop-down-list:hover .line-top {
+    width: 100%;
+    transition: all 0.4s;
 }
