@@ -52,3 +52,18 @@ for (var i = 0; i < arraymenu.length; i++) {
 
     })
 }
+
+// tạo single pages
+
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    console.log(app)
+    $routeProvider
+        .when("/", {
+            templateUrl: "home.html"
+        })
+        .when("/hotel", {
+            templateUrl: "hotellink.html"
+        })
+
+});

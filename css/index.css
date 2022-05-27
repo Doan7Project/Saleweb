@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: rgb(48, 48, 48);
+    /* background-color: rgb(48, 48, 48); */
 }
 
 .logo {
@@ -43,18 +43,24 @@ body {
     text-decoration: none;
     color: rgb(255, 255, 255);
     display: block;
-    padding: 5px 20px;
+    padding: 35px 20px;
     transition: linear 0.4s;
 }
 
+
+/* đổi màu chữ khi hover */
+
 .menu_bar ul li a:hover {
-    color: rgb(45, 50, 122);
+    color: rgb(23, 189, 255);
     transition: linear 0.4s;
     /* background-color: rgba(8, 23, 32, 0.2); */
 }
 
+
+/* màu đường kẻ viềng mỗi thanh menu */
+
 .underline {
-    background-color: rgb(45, 50, 122);
+    background-color: rgb(23, 189, 255);
     width: 0px;
     height: 0.5px;
     /* border-radius: 2vh; */
@@ -62,7 +68,7 @@ body {
     visibility: hidden;
     opacity: 0;
     left: 50%;
-    bottom: 0;
+    bottom: 25px;
     transform: translate(-50%, -50%);
     transition: ease 0.4s;
 }
@@ -164,7 +170,7 @@ body {
     opacity: 0;
     visibility: hidden;
     left: 0px;
-    text-align: center;
+    text-align: left;
     background-color: rgb(255, 255, 255);
     padding: 20px 0px;
     cursor: pointer;
@@ -182,31 +188,44 @@ body {
 .drop-bar .a {
     color: rgb(61, 61, 61);
     display: block;
+    padding: 5px 20px;
     transition: linear 0.3s;
+    border-bottom: 0.1px solid rgb(252, 249, 249);
 }
 
+
+/* hover drop menu trong bảng */
+
 .drop-bar .a:hover {
-    background-color: rgb(68, 68, 68);
+    background-image: linear-gradient(to right, rgb(9, 75, 114), rgb(23, 189, 255));
     transition: linear 0.3s;
     color: white;
 }
 
 .menu_bar .nav_links .drop-down-list:hover #menu3 {
-    color: rgb(45, 50, 122);
+    color: rgb(23, 189, 255);
 }
 
 
-/* Line top */
+/* Đường viên trên thanh drop menu */
 
 .line-top {
     width: 0px;
-    height: 10px;
+    height: 3px;
     position: absolute;
-    background-color: rgb(75, 75, 75);
-    top: 0;
+    background-image: linear-gradient(to right, rgb(9, 72, 114), rgb(15, 159, 216));
+    top: 0px;
 }
 
 .menu_bar .nav_links .drop-down-list:hover .line-top {
     width: 100%;
     transition: all 0.4s;
+}
+
+.symble {
+    position: absolute;
+    top: -25px;
+    color: white;
+    font-weight: lighter;
+    left: 15%;
 }

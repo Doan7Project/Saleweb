@@ -9,24 +9,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
     <title>Index</title>
     <link rel="stylesheet" href="../css/index.css">
 </head>
 
-<body>
+<body ng-app="myApp">
     <nav class="menu_bar">
+        <!-- Logo trang web -->
         <div class="logo">
-            <span>KDN Sales Team</span>
+            <span>KDN Sailing</span>
         </div>
+        <!-- thanh menu trang web -->
         <ul class="nav_links">
             <li>
-                <a id="menu1" href="#">Home</a>
+                <a id="menu1" href="#/!">Home</a>
                 <div class="underline">
 
                 </div>
             </li>
             <li>
-                <a id="menu2" href="#">Hotel Links</a>
+                <a id="menu2" href="#!hotel">Hotel Links</a>
                 <div class="underline">
                 </div>
             </li>
@@ -34,12 +38,14 @@
                 <a id="menu3" href="#">Products</a>
 
                 <div class="drop-bar">
+                    <div class="symble">
+                        <i class="fal fa-angle-down"></i>
+                    </div>
+                    <!-- đường viển trên -->
                     <div class="line-top"></div>
                     <a class="a" href="">Tour Mẹ Núi Cúi</a>
-                    <a class="a" href="">Child 1</a>
-                    <a class="a" href="">Child 1</a>
-                    <a class="a" href="">Child 1</a>
-                    <a class="a" href="">Child 1</a>
+                    <a class="a" href="">Tour Mũi Né</a>
+                    <a class="a" href="">Tour Nha Trang</a>
                 </div>
                 <div class="underline">
                 </div>
@@ -57,15 +63,16 @@
                 </div>
             </li>
         </ul>
+
+        <!-- thanh berger -->
         <div id="berger" class="bugger">
             <div class="line1"></div>
             <div class="line2"></div>
             <div class="line3"></div>
-
         </div>
-
     </nav>
-
+    <!-- single page -->
+    <div ng-view></div>
     <script src="../js/java.js"></script>
 </body>
 
