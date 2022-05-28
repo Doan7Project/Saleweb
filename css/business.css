@@ -1,11 +1,8 @@
-.business {
-    height: 200vh;
-}
+.business {}
 
 .business-top {
     width: 100%;
     position: relative;
-    z-index: -1;
 }
 
 .business-picture img {
@@ -61,22 +58,101 @@
 }
 
 .box-content-3 {
-    position: absolute;
-    width: 90%;
-    min-height: 40vh;
-    background-color: #ffffff;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    left: 50%;
-    top: 160%;
-    transform: translate(-50%, -160%);
-    box-shadow: 0px 8px 8px 2px rgba(95, 95, 95, 0.3);
-    border-radius: 20%;
+    position: relative;
+    width: 100%;
+    margin: 15% auto;
+    z-index: 1;
 }
 
+.box-primary {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+
+/* tạo ra khung vuong cho 3 thẻ */
+
+.box-primary-child {
+    position: relative;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    margin: 5px auto;
+    width: 90%;
+    height: 400px;
+    cursor: pointer;
+    transition: 0.4s linear;
+    border: 1px solid #474747;
+}
+
+
+/* tạo hình tròn chứa hình bên trong */
+
 .box1 {
-    width: 100%;
-    height: auto;
+    position: absolute;
+    left: 50%;
+    top: -15%;
+    transform: translate(-50%, -15%);
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
     background-color: rgb(255, 255, 255);
     text-align: center;
+    cursor: pointer;
+}
+
+.box1 img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 190px;
+    height: 190px;
+    border-radius: 190px;
+}
+
+.box-content {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, 30%);
+    padding: 20px;
+}
+
+.box-content-3 .box-primary .box-primary-child .box-content label {
+    color: rgb(12, 102, 138);
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* kết thúc hình tròn */
+
+.box-content-3 .box-primary .box-primary-child label {
+    text-align: center;
+    color: rebeccapurple;
+}
+
+
+/* Responsive 3 thanh */
+
+@media screen and (max-width:980px) {
+    .box-primary {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .box-primary-child {
+        margin: 80px auto;
+    }
+}
+
+@media screen and (max-width:820px) {
+    .box-primary {
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .box-primary-child {
+        margin: 80px auto;
+    }
 }
