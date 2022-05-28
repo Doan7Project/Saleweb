@@ -172,6 +172,7 @@
     }
     .bugger {
         display: block;
+        z-index: 3;
     }
     .nav_links {
         position: fixed;
@@ -185,6 +186,7 @@
         width: 100%;
         height: 100%;
         transition: 0.5s ease;
+        z-index: 2;
     }
     .nav_links li {
         opacity: 0;
