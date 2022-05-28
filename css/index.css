@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    /* background-color: rgb(48, 48, 48); */
-}
-
 .logo {
     cursor: pointer;
 }
@@ -43,7 +39,7 @@ body {
     text-decoration: none;
     color: rgb(255, 255, 255);
     display: block;
-    padding: 35px 20px;
+    padding: 6px 20px;
     transition: linear 0.4s;
 }
 
@@ -53,7 +49,6 @@ body {
 .menu_bar ul li a:hover {
     color: rgb(23, 189, 255);
     transition: linear 0.4s;
-    /* background-color: rgba(8, 23, 32, 0.2); */
 }
 
 
@@ -63,12 +58,11 @@ body {
     background-color: rgb(23, 189, 255);
     width: 0px;
     height: 0.5px;
-    /* border-radius: 2vh; */
     position: absolute;
     visibility: hidden;
     opacity: 0;
     left: 50%;
-    bottom: 25px;
+    bottom: 5px;
     transform: translate(-50%, -50%);
     transition: ease 0.4s;
 }
@@ -79,6 +73,76 @@ body {
     visibility: visible;
     transition: ease 0.4s;
 }
+
+
+/* Drop down list khi chưa co gian màn hình */
+
+.drop-down-list {
+    position: relative;
+}
+
+.menu_bar .nav_links .drop-down-list .drop-down-content {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    left: 10px;
+    background-color: rgb(9, 85, 136, 0.8);
+    width: 200px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.drop-down-list .drop-down-content li a:hover {
+    background-color: rgb(53, 56, 55, 0.5);
+    color: rgb(231, 249, 255);
+    transition: 0.3s ease-in;
+}
+
+.menu_bar .nav_links .drop-down-list:hover .drop-down-content {
+    opacity: 1;
+    display: block;
+    visibility: visible;
+    z-index: 1;
+    transform: translate(-10px, -0px);
+    transition: 0.3s ease-in;
+}
+
+.drop-down-list:hover .drop-down-content {
+    color: rgb(23, 189, 255);
+}
+
+
+/* drop dow responsive */
+
+@media screen and (max-width:820px) {
+    .menu_bar .nav_links .drop-down-list .drop-down-content {
+        position: relative;
+        display: none;
+        width: 100%;
+        background-color: transparent;
+        padding-bottom: 0px;
+        padding-top: 0px;
+    }
+    .drop-down-list .drop-down-content li a {
+        padding: 5px 20px;
+    }
+    .drop-down-list .drop-down-content li a:hover {
+        background-color: transparent;
+        color: rgb(133, 133, 133);
+    }
+    .menu_bar .nav_links .drop-down-list:hover .drop-down-content {
+        display: block;
+    }
+    .menu_bar ul li a:hover~.underline {
+        visibility: hidden;
+    }
+}
+
+
+/* end drop down responsive */
+
+
+/* Thanh burgger ản hiện khi thu man hình */
 
 .bugger {
     cursor: pointer;
@@ -96,15 +160,16 @@ body {
 }
 
 @media screen and (max-width:820px) {
-    /* body {
+    body {
         overflow-x: hidden;
-    } */
+    }
     .bugger {
         display: block;
     }
     .nav_links {
         position: absolute;
-        left: -100%;
+        visibility: hidden;
+        right: -100%;
         height: 100vh;
         top: 0px;
         background-color: rgb(49, 47, 47, 0.9);
@@ -112,7 +177,6 @@ body {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        /* transform: translateX(100%); */
         transition: 0.5s ease;
     }
     .nav_links li {
@@ -120,16 +184,15 @@ body {
         position: absolute;
         top: 20%;
     }
-    /* Drop down list */
-    .menu_bar .nav_links .drop-down-list:hover .drop-bar {
-        position: relative;
-        transition: 0.3s ease;
+    .menu_bar ul li a {
+        padding: 10px 20px;
     }
 }
 
 .nav-active {
     /* transform: translateX(0%); */
-    left: 0;
+    right: 0;
+    visibility: visible;
     transition: 0.5s ease;
 }
 
@@ -154,78 +217,4 @@ body {
 
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
-}
-
-
-/* drop bar */
-
-.drop-down-list {
-    position: relative;
-    display: inline-block;
-}
-
-.drop-bar {
-    position: absolute;
-    min-width: 200px;
-    opacity: 0;
-    visibility: hidden;
-    left: 0px;
-    text-align: left;
-    background-color: rgb(255, 255, 255);
-    padding: 20px 0px;
-    cursor: pointer;
-    z-index: 1;
-    /* transition: 0.5s ease; */
-}
-
-.menu_bar .nav_links .drop-down-list:hover .drop-bar {
-    opacity: 1;
-    visibility: visible;
-    left: 20px;
-    transition: 0.5s ease;
-}
-
-.drop-bar .a {
-    color: rgb(61, 61, 61);
-    display: block;
-    padding: 5px 20px;
-    transition: linear 0.3s;
-    border-bottom: 0.1px solid rgb(252, 249, 249);
-}
-
-
-/* hover drop menu trong bảng */
-
-.drop-bar .a:hover {
-    background-image: linear-gradient(to right, rgb(9, 75, 114), rgb(23, 189, 255));
-    transition: linear 0.3s;
-    color: white;
-}
-
-.menu_bar .nav_links .drop-down-list:hover #menu3 {
-    color: rgb(23, 189, 255);
-}
-
-
-/* Đường viên trên thanh drop menu */
-
-.line-top {
-    width: 0px;
-    height: 3px;
-    position: absolute;
-    background-image: linear-gradient(to right, rgb(9, 72, 114), rgb(15, 159, 216));
-    top: 0px;
-}
-
-.menu_bar .nav_links .drop-down-list:hover .line-top {
-    width: 100%;
-    transition: all 0.4s;
-}
-
-.symble {
-    position: absolute;
-    top: -25px;
-    color: white;
-    font-weight: lighter;
-    left: 15%;
 }
