@@ -30,10 +30,11 @@ const navSlide = () => {
 }
 
 navSlide();
-var arraymenu = ['menu1', 'menu2', 'menu3', 'menu4', 'menu5']
+var arraymenu = ['menu1', 'menu2', 'menu4', 'menu5']
 for (var i = 0; i < arraymenu.length; i++) {
     var menuchilde = document.getElementById(arraymenu[i])
     menuchilde.addEventListener('click', function() {
+
         const bugger = document.querySelector('.bugger');
         const nav = document.querySelector('.nav_links');
         const navLinks = document.querySelectorAll('.nav_links li');
@@ -60,10 +61,35 @@ app.config(function($routeProvider) {
     console.log(app)
     $routeProvider
         .when("/", {
-            templateUrl: "home.html"
+            templateUrl: "business.html"
         })
         .when("/hotel", {
             templateUrl: "hotellink.html"
         })
 
 });
+//khi click chon thanh menu thi se bien mat 
+
+const arraydrop = ['drop1', 'drop2', 'drop3', 'drop4']
+for (var i = 0; i < arraydrop.length; i++) {
+    const hidedrop = document.getElementById(arraydrop[i])
+    hidedrop.addEventListener('click', function() {
+        const bugger = document.querySelector('.bugger');
+        const nav = document.querySelector('.nav_links');
+        const navLinks = document.querySelectorAll('.nav_links li');
+        nav.classList.toggle('nav-active');
+        bugger.classList.remove('toggle');
+        navLinks.forEach((link, index) => {
+
+            if (link.style.animation) {
+                link.style.animation = ''
+
+            } else {
+
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index/7 + 0.5}s`;
+            }
+        })
+
+    })
+
+}

@@ -47,7 +47,7 @@
 /* đổi màu chữ khi hover */
 
 .menu_bar ul li a:hover {
-    color: rgb(23, 189, 255);
+    color: rgb(153, 153, 153);
     transition: linear 0.4s;
 }
 
@@ -94,9 +94,14 @@
 
 .drop-down-list .drop-down-content li a:hover {
     background-color: rgb(53, 56, 55, 0.5);
-    color: rgb(231, 249, 255);
+    color: rgb(255, 255, 255);
     transition: 0.3s ease-in;
 }
+
+
+/* .drop-down-content:focus-within {
+    display: none !important;
+} */
 
 .menu_bar .nav_links .drop-down-list:hover .drop-down-content {
     opacity: 1;
@@ -107,8 +112,8 @@
     transition: 0.3s ease-in;
 }
 
-.drop-down-list:hover .drop-down-content {
-    color: rgb(23, 189, 255);
+.drop-down-list:hover :first-child {
+    color: rgb(153, 153, 153);
 }
 
 
@@ -122,9 +127,11 @@
         background-color: transparent;
         padding-bottom: 0px;
         padding-top: 0px;
+        text-align: center;
     }
     .drop-down-list .drop-down-content li a {
         padding: 5px 20px;
+        align-items: center;
     }
     .drop-down-list .drop-down-content li a:hover {
         background-color: transparent;
