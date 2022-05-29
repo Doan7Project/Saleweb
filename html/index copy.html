@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <title>Index</title>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body ng-app="myApp">
+    <nav class="menu_bar">
+        <!-- Logo trang web -->
+        <div class="logo">
+            <span>EasyTravelVietnam</span>
+        </div>
+        <!-- thanh menu trang web -->
+        <ul class="nav_links">
+            <li>
+                <a id="menu1" href="#/!">Business</a>
+                <div class="underline">
+
+                </div>
+            </li>
+            <li>
+                <a id="menu2" href="#!hotel">Hotel Links</a>
+                <div class="underline">
+                </div>
+            </li>
+            <li class="drop-down-list">
+                <a id="menu3" href="#">Products <i class="fas fa-angle-down"></i></a>
+                <ul class="drop-down-content">
+                    <li>
+                        <a id="drop1" href="#">LInking 1</a>
+                    </li>
+                    <li>
+                        <a id="drop2" href="">LInking 1</a>
+                    </li>
+                    <li>
+                        <a id="drop3" href="">LInking 1</a>
+                    </li>
+                    <li>
+                        <a id="drop4" href="">LInking 1</a>
+                    </li>
+
+                </ul>
+                <div class="underline">
+                </div>
+            </li>
+            <li>
+                <a id="menu4" href="#">About Us</a>
+                <div class="underline">
+
+                </div>
+            </li>
+            <li>
+                <a id="menu5" href="#">Contact</a>
+                <div class="underline">
+
+                </div>
+            </li>
+            <li>
+                <a id="menu6" href="#">Business</a>
+                <div class="underline">
+
+                </div>
+            </li>
+        </ul>
+
+        <!-- thanh berger -->
+        <div id="berger" class="bugger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    <!-- single page -->
+    <div ng-view></div>
+    <script src="../js/java.js"></script>
+</body>
+
+</html>
