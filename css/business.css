@@ -1,7 +1,7 @@
         .business-top {
             width: 100%;
             position: relative;
-            margin-bottom: 10%;
+            margin-bottom: 5%;
         }
         
         .business-picture img {
@@ -45,113 +45,80 @@
             transform: translate(-50%, -75%);
             z-index: 1;
         }
+        /* diem noi bat */
         
-        .box-content {
-            padding: 10px;
+        .dnb {
+            text-align: center;
+            position: relative;
+            padding: 20px 0px 40px 0px;
+            font-family: sans-serif;
+            color: #eb0d32;
         }
         
-        .box-content span {
-            font-size: 20px;
-            font-weight: bold;
-            color: #000000;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        .business-underline {
+            position: absolute;
+            left: 50%;
+            bottom: 30%;
+            transform: translate(-50%, -30%);
+            width: 50px;
+            height: 3px;
+            background-color: rgb(0, 0, 0);
         }
+        /* bat dau tao khu bao lon */
         
         .box-content-3 {
-            position: relative;
-            width: 100%;
-            margin: auto;
-            z-index: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 320px);
+            justify-content: center;
         }
-        /* điểm nổi bật */
+        /* khung bao nho */
         
         .box-primary {
-            display: grid;
-            grid-template-columns: auto auto auto;
-        }
-        
-        .business-noibat {
-            background-color: #0b8eda;
-            width: 100%;
-            height: 20px;
-        }
-        /* tạo ra khung vuong cho 3 thẻ */
-        
-        .box-primary-child {
             position: relative;
-            border-top-left-radius: 20%;
-            border-top-right-radius: 20%;
-            margin: 5px auto;
-            width: 90%;
             height: 400px;
-            cursor: pointer;
-            transition: 0.4s linear;
-            border: 1px solid #474747;
+            width: 300px;
+            padding: 20px;
+            margin: 10px;
+            /* background-color: #0e74afcb;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%; */
+            z-index: -1;
         }
-        /* tạo hình tròn chứa hình bên trong */
+        /* tao the bao gom cirle */
         
-        .box1 {
+        .box {
             position: absolute;
             left: 50%;
-            top: -15%;
-            transform: translate(-50%, -15%);
-            width: 200px;
-            height: 200px;
-            border-radius: 200px;
+            top: 0%;
+            transform: translate(-50%, 0%);
+            height: 128px;
+            width: 128px;
+            border-radius: 128px;
             background-color: rgb(255, 255, 255);
-            text-align: center;
-            cursor: pointer;
         }
         
-        .box1 img {
+        .box img {
             position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            width: 190px;
-            height: 190px;
-            border-radius: 190px;
+            left: 53%;
+            top: 0%;
+            transform: translate(-53%, 0%);
+            height: 120px;
+            width: 120px;
+            border-radius: 120px;
         }
         
         .box-content {
             position: absolute;
-            width: 100%;
+            padding: 60px 20px;
             left: 50%;
-            top: 20%;
-            transform: translate(-50%, 20%);
-            padding: 20px;
-        }
-        
-        .box-content-3 .box-primary .box-primary-child .box-content label {
-            color: rgb(204, 13, 131);
-            font-size: 20px;
-            font-weight: 700;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
-        /* kết thúc hình tròn */
-        
-        .box-content-3 .box-primary .box-primary-child label {
+            bottom: 0%;
+            transform: translate(-50%, -0%);
+            width: 300px;
+            height: 320px;
             text-align: center;
-            color: rebeccapurple;
-        }
-        /* Responsive 3 thanh */
-        
-        @media screen and (max-width:980px) {
-            .box-primary {
-                display: grid;
-                grid-template-columns: auto auto;
-            }
-            .box-primary-child {
-                margin-top: 30%;
-            }
-        }
-        
-        @media screen and (max-width:614px) {
-            .box-primary {
-                display: grid;
-                grid-template-columns: auto;
-            }
-            .box-primary-child {
-                margin-top: 30%;
-            }
+            color: rgb(255, 255, 255);
+            border-top-left-radius: 20%;
+            border-top-right-radius: 20%;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            z-index: -1;
         }
