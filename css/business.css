@@ -130,6 +130,8 @@
             color: rgb(255, 255, 255);
             border-top-left-radius: 20%;
             border-top-right-radius: 20%;
+            border-bottom-left-radius: 20%;
+            border-bottom-right-radius: 20%;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             z-index: -1;
         }
