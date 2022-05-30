@@ -73,6 +73,7 @@ app.config(function($routeProvider) {
 const arraydrop = ['drop1', 'drop2', 'drop3', 'drop4']
 for (var i = 0; i < arraydrop.length; i++) {
     const hidedrop = document.getElementById(arraydrop[i])
+    console.log(hidedrop)
     hidedrop.addEventListener('click', function() {
         const bugger = document.querySelector('.bugger');
         const nav = document.querySelector('.nav_links');
@@ -91,5 +92,56 @@ for (var i = 0; i < arraydrop.length; i++) {
         })
 
     })
+
+}
+
+// business page
+
+
+function bsexperience() {
+    const Epexpoint = document.getElementById('box_experience')
+    const expcost = document.getElementById('box_cost')
+    const exprevenue = document.getElementById('box_revenue')
+    Epexpoint.style.opacity = '1'
+    Epexpoint.style.visibility = "visible"
+    Epexpoint.style.transition = "0.3s linear"
+    expcost.style.opacity = '0'
+    expcost.style.visibility = "hidden"
+    expcost.style.transition = "0.3s linear"
+    exprevenue.style.opacity = '0'
+    exprevenue.style.visibility = "hidden"
+    exprevenue.style.transition = "0.3s linear"
+
+}
+
+function bsecost() {
+    const Epexpoint = document.getElementById('box_experience')
+    const expcost = document.getElementById('box_cost')
+    const exprevenue = document.getElementById('box_revenue')
+    Epexpoint.style.opacity = '0'
+    Epexpoint.style.visibility = "hidden"
+    Epexpoint.style.transition = "0.3s linear"
+    expcost.style.opacity = '1'
+    expcost.style.visibility = "visible"
+    expcost.style.transition = "0.3s linear"
+    exprevenue.style.opacity = '0'
+    exprevenue.style.visibility = "hidden"
+    exprevenue.style.transition = "0.3s linear"
+
+}
+
+function bserevenue() {
+    const Epexpoint = document.getElementById('box_experience')
+    const expcost = document.getElementById('box_cost')
+    const exprevenue = document.getElementById('box_revenue')
+    Epexpoint.style.opacity = '0'
+    Epexpoint.style.visibility = "hidden"
+    Epexpoint.style.transition = "0.3s linear"
+    expcost.style.opacity = '0'
+    expcost.style.visibility = "hidden"
+    expcost.style.transition = "0.3s linear"
+    exprevenue.style.opacity = '1'
+    exprevenue.style.visibility = "visible"
+    exprevenue.style.transition = "0.3s linear"
 
 }
