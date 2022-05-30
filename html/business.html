@@ -1,6 +1,4 @@
-<link rel="stylesheet" href="../css/business.css">
-
-<section class="business">
+<section class="business" ng-controller="businessCtrl">
     <div class="business-top">
         <div class="business-content">
             <!-- <span class="span-a">TỐI ƯU HÓA DOANH THU</span>
@@ -11,21 +9,46 @@
         </div>
     </div>
     <!-- thông nỗi bật -->
+    <div class="dnb">
+        <div class="dnb-symbol">
+            <img src="../symbol/sale.png">
+            <h2>ĐIỂM NỖI BẬT BẠN CẦN BIẾT</h2>
+        </div>
+        <div class="business-underline">
+
+        </div>
+    </div>
     <div class="business-strongpoint">
         <div class="input-strongpoint">
-            <input class="inputs active" type="button" value="Experiences" onclick="bsexperience()">
-            <input class="inputs" type="button" value="Cost" onclick="bsecost()">
-            <input class="inputs" type="button" value="Revenue" onclick="bserevenue()">
+            <div class="underline-input">
+                <input id="input_1" class="inputs active" type="button" value="Đội Kinh Doanh" onclick="bsexperience()">
+                <div class="inderline-input-child">
+
+                </div>
+            </div>
+            <div class="underline-input">
+                <input id="input_2" class="inputs" type="button" value="Giảm Chi Chí Vận Hành" onclick="bsecost()">
+                <div class="inderline-input-child">
+
+                </div>
+            </div>
+            <div class="underline-input">
+                <input id="input_3" class="inputs" type="button" value="Tăng Doanh Số" onclick="bserevenue()">
+                <div class="inderline-input-child">
+
+                </div>
+            </div>
+
         </div>
         <div class="information-strongpoint">
             <div id="box_experience">
-                <img src="../img/Travelpng.png" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci architecto non eius unde commodi, itaque enim veritatis laboriosam, tempore inventore minus maiores cumque doloribus animi provident eaque quidem alias quod!</p>
             </div>
             <div id="box_cost">
-                <img src="../img/DSC_1996.JPG" alt="">
+                <p style="color:aquamarine ;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci architecto non eius unde commodi, itaque enim veritatis laboriosam, tempore inventore minus maiores cumque doloribus animi provident eaque quidem alias quod!</p>
             </div>
             <div id="box_revenue">
-                <img src="../img/DSC_2004.JPG" alt="">
+                <p style="color:rgb(167, 26, 132) ;">Start accepting reservations and payments directly from your website and Facebook page using the integrated booking button</p>
             </div>
         </div>
     </div>
@@ -74,4 +97,5 @@
         </div>
     </div>
     <!-- Kết thúc thông tin đội kinh doanh -->
+
 </section>
