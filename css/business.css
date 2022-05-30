@@ -62,7 +62,7 @@
         
         .inderline-input-child {
             position: absolute;
-            width: 300px;
+            width: 296px;
             left: 50%;
             bottom: 5px;
             transform: translate(-50%);
@@ -151,6 +151,7 @@
         }
         
         .dnb-symbol {
+            padding: 30px;
             display: block;
             justify-content: center;
             align-items: baseline;
