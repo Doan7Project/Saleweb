@@ -133,6 +133,9 @@
         justify-content: left;
         padding: 0px 40px;
     }
+    .logo img {
+        width: 50px;
+    }
     .menu_bar .nav_links .drop-down-list .drop-down-content {
         position: relative;
         display: none;
