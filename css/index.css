@@ -8,10 +8,15 @@
     cursor: pointer;
 }
 
-.logo span {
+
+/* .logo span {
     color: white;
     font-weight: bold;
     border-radius: 20px;
+} */
+
+.logo img {
+    width: 100px;
 }
 
 .menu_bar {
@@ -21,7 +26,7 @@
     /* background-color: rgb(9, 85, 136); */
     align-items: center;
     width: 100%;
-    min-height: 10vh;
+    min-height: 15vh;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     position: fixed;
@@ -124,6 +129,10 @@
 /* drop dow responsive */
 
 @media screen and (max-width:820px) {
+    .menu_bar {
+        justify-content: left;
+        padding: 0px 40px;
+    }
     .menu_bar .nav_links .drop-down-list .drop-down-content {
         position: relative;
         display: none;
