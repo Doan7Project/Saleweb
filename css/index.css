@@ -16,7 +16,7 @@
 } */
 
 .logo img {
-    width: 100px;
+    width: 200px;
 }
 
 .menu_bar {
@@ -134,7 +134,7 @@
         padding: 0px 40px;
     }
     .logo img {
-        width: 50px;
+        width: 100px;
     }
     .menu_bar .nav_links .drop-down-list .drop-down-content {
         position: relative;
